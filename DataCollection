@@ -12,10 +12,12 @@ let dataColl=[];//my array
 //csvArray.push(column);
 //}
 row.forEach((row) => {let column=row.split(",");
-    csvArray.push(column);});git
+   // csvArray.push(column);});  //not an array erro
+   dataColl.push(column);});
+
 
     
-});
+//});
 //output
 
-console.log(dataArray);
+console.log(dataColl);
