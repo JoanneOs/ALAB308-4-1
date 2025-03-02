@@ -39,15 +39,17 @@ let csvArray1 =
 
 let row1 = csvArray1.split("\n");
 let dataColl1 = [];
-
 row1.forEach((row1) => {
   let column1 = row1.split(",");
   dataColl1.push(column1);
 });
+console.log(dataColl1);
 
 console.log(dataColl1);
+
 //for loop to put data to array
-//for (let i=0;i,row.length;i++)
-//   {let column=row.split(",");
-//csvArray.push(column);
-//}
+// for (let i=1;i,row.length;i++)//strting from second row
+//  { for (let j=1;j,row.length;j++){let dataColl1[i][j]=dataColl1[0][]+dataColl1[j][];
+// //csvArray.push(column);
+// }
+// console.log(dataColl1);
