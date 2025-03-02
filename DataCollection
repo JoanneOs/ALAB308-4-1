@@ -7,4 +7,7 @@ let csvArray="ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63
 let row=csvArray.split("\n");
 let dataColl=[];//my array
 //for loop to put data to array
-for (let i=0;)
+for (let i=0;i,row.length;i++)
+    let column=row[i].split",";
+dataArray.push(columns);
+}
