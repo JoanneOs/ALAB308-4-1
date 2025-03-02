@@ -47,6 +47,7 @@ console.log(dataColl1);
 
 console.log(dataColl1);
 
+//objects can be done tomorrow
 //for loop to put data to array
 // for (let i=1;i,row.length;i++)//strting from second row
 //  { for (let j=1;j,row.length;j++){let dataColl1[i][j]=dataColl1[0][]+dataColl1[j][];
