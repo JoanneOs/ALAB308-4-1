@@ -64,3 +64,7 @@ for (leyx=0;i<datacoll[0].length;i++)
 
 //transfrom rows to objects
 
+let object=[];
+for (leti=1;i<dataColl.length;i++)
+{let rowR={};
+for (let j=0;j<firstrow.length;j++){rowR[firstrow[j]]=dataColl[i][j];}
