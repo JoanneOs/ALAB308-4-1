@@ -45,10 +45,23 @@ let row1 = csvArray1.split("\n");
 let h=row1[0].split(",");
 let dataColl1 = [];
 
-row1.forEach((row1) => {
-  let column1 = row1.split(",");
-  dataColl1.push(column1);
-});
+// row1.forEach((row1) => {
+//   let column1 = row1.split(",");
+//   dataColl1.push(column1);
+// });
+
+// Loop through the remaining rows (skipping the headers row)
+for (let i = 1; i < row1.length; i++) {
+  let column1 = row1[i].split(","); // Split each row into columns
+  let rowObject = {}; // Create an empty object for each row
+  
+  // Assign values to the object based on headers
+  for (let j = 0; j < h.length; j++) {
+    rowObject[h[j].toLowerCase()] = column1[j];
+  }
+  
+  dataColl1.push(rowObject); // Push the object to the array
+}
 console.log("----------------------------");
 console.log("Part 3: Transforming Data");
 
