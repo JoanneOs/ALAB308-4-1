@@ -96,18 +96,31 @@ console.log("here data as object:",object);
 // Extract the first row (headers)
 let firstrow = [];
 for (let i = 0; i < dataColl[0].length; i++) {
-  firstrow.push(dataColl[0][i].toLowerCase()); // Convert to lowercase
+  firstrow.push(dataColl[0][i].toLowerCase()); // Convert headers to lowercase
 }
 
-// Transform rows to objects
+// Step 2: Transform rows into objects using the headers
+
+let dataColl4 = [
+  ["id", "name", "occupation", "age"],
+  ["42", "Bruce", "Knight", "41"],
+  ["48", "Barry", "Runner", "25"], // Missing entry that needs to be added
+  ["57", "Bob", "Fry Cook", "19"],
+  ["63", "Blaine", "Quiz Master", "58"],
+  ["98", "Bill", "Doctor’s Assistant", "26"]
+];
+// emove the last element
+data.pop();
+
 let object = [];
-for (let i = 1; i < dataColl.length; i++) {
+for (let i = 1; i < dataColl4.length; i++) {
   let rowR = {};
   for (let j = 0; j < firstrow.length; j++) {
-    rowR[firstrow[j]] = dataColl[i][j]; // Assign values to keys
+    rowR[firstrow[j]] = dataColl4[i][j]; // Assign each value to the corresponding header
   }
-  object.push(rowR);
+  object.push(rowR); // Push the object into the final array
 }
+
 console.log("----------------------------");
 console.log("Part 4: Sorting and Manipulating Data");
 console.log("Here is the data as objects:", object);
