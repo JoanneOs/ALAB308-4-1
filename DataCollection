@@ -57,4 +57,10 @@ console.log(dataColl1);
 
 //will submit this half of work, and wait until learning objects on Tusday to complete
 
+//part 3
+let firstrow=[];
+for (leyx=0;i<datacoll[0].length;i++)
+{firstrow.push(datacoll[0][i]));}
+
+//transfrom rows to objects
 
