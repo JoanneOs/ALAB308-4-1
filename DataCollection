@@ -42,7 +42,9 @@ let csvArray1 =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
 let row1 = csvArray1.split("\n");
+let h=row1[0].split(",");
 let dataColl1 = [];
+
 row1.forEach((row1) => {
   let column1 = row1.split(",");
   dataColl1.push(column1);
@@ -132,20 +134,31 @@ let object1 = [
 let finalcsv = "id,name,occupation,age\n";
 
 // Step 2: Loop through the objects and build each CSV row
-for (let i = 0; i < object1.length; i++) {
-  // Access properties using object1[i]
-  let r =
-    object1[i].id +
-    "," +
-    object1[i].name +
-    "," +
-    object1[i].occupation +
-    "," +
-    object1[i].age;
+// for (let i = 0; i < object1.length; i++) {
+//   // Access properties using object1[i]
+//   let r =
+//     object1[i].id +
+//     "," +
+//     object1[i].name +
+//     "," +
+//     object1[i].occupation +
+//     "," +
+//     object1[i].age;
 
-  // Add the row and a new line
-  finalcsv += r + "\n";
+//   // Add the row and a new line
+//   finalcsv += r + "\n";
+// }
+// Loop through each object in "object1"
+for (let i = 0; i < object1.length; i++) {
+  
+  // Create a row with id, name, occupation, and age, separated by commas
+  let r = object1[i].id + "," + object1[i].name + "," + object1[i].occupation + "," + object1[i].age;
+
+  // Add the row to "finalcsv" and move to the next line
+  finalcsv += r + "\n"; // "\n" means new line
 }
+
+
 
 // Step 3: Output the final CSV format
 console.log("----------------------------");
