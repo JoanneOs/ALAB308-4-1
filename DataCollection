@@ -4,6 +4,8 @@
 
 let csvArray =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+  console.log("Part 1: Refactoring Old Code");
+  console.log(csvArray);
 
 //Part 2: Expanding Functionality
 /*Begin with the following task:
@@ -30,7 +32,7 @@ row.forEach((row) => {
 
 //});
 //output
-
+console.log("Part 2: Expanding Functionality");
 console.log(dataColl);
 
 //Part 3: Transforming Data
@@ -43,7 +45,7 @@ row1.forEach((row1) => {
   let column1 = row1.split(",");
   dataColl1.push(column1);
 });
-console.log(dataColl1);
+console.log("Part 3: Transforming Data");
 
 console.log(dataColl1);
 
@@ -88,7 +90,7 @@ for (let i = 1; i < dataColl.length; i++) {
   }
   object.push(rowR);
 }
-
+console.log("Part 4: Sorting and Manipulating Data");
 console.log("Here is the data as objects:", object);
 
 
@@ -97,6 +99,7 @@ console.log("Here is the data as objects:", object);
 // so we doing backwork for previous steps
 
 let finalcsv=" id,name,occupation,age\n";
-for (let i=0;i<object.length,i++){let r=object.id+","+object[i].name+","+object[i].occupation+","+object[i].age;
+for (let i=0;i<object.length;i++){let r=object.id+","+object[i].name+","+object[i].occupation+","+object[i].age;
   finalcsv=r+"\n";//adding row and new line
 }
+console.log("Part 5: Final CSV format:\n", finalcsv);
