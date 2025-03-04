@@ -97,3 +97,6 @@ console.log("Here is the data as objects:", object);
 // so we doing backwork for previous steps
 
 let finalcsv=" id,name,occupation,age\n";
+for (let i=0;i<object.length,i++){let r=object.id+","+object[i].name+","+object[i].occupation+","+object[i].age;
+  finalcsv=r+"\n";//adding row and new line
+}
