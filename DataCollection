@@ -1,12 +1,12 @@
 //Hi this is some of my homework, 1sr,2nd part
 
 //previous homework CSV
-
+/*
 let csvArray =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 console.log("----------------------------");
 console.log("Part 1: Refactoring Old Code");
-console.log(csvArray);
+console.log(csvArray);*/
 
 //Part 2: Expanding Functionality
 /*Begin with the following task:
@@ -15,8 +15,9 @@ Instead of hard-coding four columns per row, expand your code to accept any numb
 columns. This should be calculated dynamically based on the first row of data.*/
 
 //split csv into rows
+/*
 let row = csvArray.split("\n");
-let dataColl = []; //my array
+let dataColl = []; //my array*/
 //for loop to put data to array
 //for (let i=0;i,row.length;i++)
 //   {let column=row.split(",");
@@ -25,25 +26,25 @@ let dataColl = []; //my array
 
 //Part 3: Transforming Data
 
-row.forEach((row) => {
-  let column = row.split(",");
-  // csvArray.push(column);});  //not an array erro
-  dataColl.push(column);
-});
+// row.forEach((row) => {
+//   let column = row.split(",");
+//   // csvArray.push(column);});  //not an array erro
+//   dataColl.push(column);
+// });
 
 //});
 //output
-console.log("----------------------------");
-console.log("Part 2: Expanding Functionality");
-console.log(dataColl);
+// console.log("----------------------------");
+// console.log("Part 2: Expanding Functionality");
+// console.log(dataColl);
 
-//Part 3: Transforming Data
-let csvArray1 =
-  "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+// //Part 3: Transforming Data
+// let csvArray1 =
+//   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
-let row1 = csvArray1.split("\n");
-let h=row1[0].split(",");
-let dataColl1 = [];
+// let row1 = csvArray1.split("\n");
+// let h=row1[0].split(",");
+// let dataColl1 = [];
 
 // row1.forEach((row1) => {
 //   let column1 = row1.split(",");
@@ -51,21 +52,21 @@ let dataColl1 = [];
 // });
 
 // Loop through the remaining rows (skipping the headers row)
-for (let i = 1; i < row1.length; i++) {
-  let column1 = row1[i].split(","); // Split each row into columns
-  let rowObject = {}; // Create an empty object for each row
+// for (let i = 1; i < row1.length; i++) {
+//   let column1 = row1[i].split(","); // Split each row into columns
+//   let rowObject = {}; // Create an empty object for each row
   
-  // Assign values to the object based on headers
-  for (let j = 0; j < h.length; j++) {
-    rowObject[h[j].toLowerCase()] = column1[j];
-  }
+//   // Assign values to the object based on headers
+//   for (let j = 0; j < h.length; j++) {
+//     rowObject[h[j].toLowerCase()] = column1[j];
+//   }
   
-  dataColl1.push(rowObject); // Push the object to the array
-}
-console.log("----------------------------");
-console.log("Part 3: Transforming Data");
+//   dataColl1.push(rowObject); // Push the object to the array
+// }
+// console.log("----------------------------");
+// console.log("Part 3: Transforming Data");
 
-console.log(dataColl1);
+// console.log(dataColl1);
 
 //objects can be done tomorrow
 //for loop to put data to array
@@ -94,23 +95,23 @@ console.log("here data as object:",object);
 */
 //wring clean code
 // Extract the first row (headers)
-let firstrow = [];
-for (let i = 0; i < dataColl[0].length; i++) {
-  firstrow.push(dataColl[0][i].toLowerCase()); // Convert to lowercase
-}
+// let firstrow = [];
+// for (let i = 0; i < dataColl[0].length; i++) {
+//   firstrow.push(dataColl[0][i].toLowerCase()); // Convert to lowercase
+// }
 
-// Transform rows to objects
-let object = [];
-for (let i = 1; i < dataColl.length; i++) {
-  let rowR = {};
-  for (let j = 0; j < firstrow.length; j++) {
-    rowR[firstrow[j]] = dataColl[i][j]; // Assign values to keys
-  }
-  object.push(rowR);
-}
-console.log("----------------------------");
-console.log("Part 4: Sorting and Manipulating Data");
-console.log("Here is the data as objects:", object);
+// // Transform rows to objects
+// let object = [];
+// for (let i = 1; i < dataColl.length; i++) {
+//   let rowR = {};
+//   for (let j = 0; j < firstrow.length; j++) {
+//     rowR[firstrow[j]] = dataColl[i][j]; // Assign values to keys
+//   }
+//   object.push(rowR);
+// }
+// console.log("----------------------------");
+// console.log("Part 4: Sorting and Manipulating Data");
+// console.log("Here is the data as objects:", object);
 
 //part 5
 //As a final task, transform the final set of data back into CSV format.
@@ -135,16 +136,16 @@ console.log("Part 5: Final CSV format:\n", finalcsv);
 */
 
 // The array of objects
-let object1 = [
-  { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
-  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
-  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
-  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
-  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
-];
+// let object1 = [
+//   { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+//   { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+//   { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+//   { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+//   { id: "7", name: "Bilbo", occupation: "None", age: "111" },
+// ];
 
-// Step 1: Define the CSV header
-let finalcsv = "id,name,occupation,age\n";
+// // Step 1: Define the CSV header
+// let finalcsv = "id,name,occupation,age\n";
 
 // Step 2: Loop through the objects and build each CSV row
 // for (let i = 0; i < object1.length; i++) {
@@ -161,7 +162,93 @@ let finalcsv = "id,name,occupation,age\n";
 //   // Add the row and a new line
 //   finalcsv += r + "\n";
 // }
-// Loop through each object in "object1"
+// // Loop through each object in "object1"
+// for (let i = 0; i < object1.length; i++) {
+  
+//   // Create a row with id, name, occupation, and age, separated by commas
+//   let r = object1[i].id + "," + object1[i].name + "," + object1[i].occupation + "," + object1[i].age;
+
+//   // Add the row to "finalcsv" and move to the next line
+//   finalcsv += r + "\n"; // "\n" means new line
+// }
+
+
+
+// // Step 3: Output the final CSV format
+// console.log("----------------------------");
+// console.log("Part 5: Final CSV format:\n", finalcsv);
+
+
+//////////////////
+//clean homework without comments collected from work above
+/////////////////
+let csvArray =
+  "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+console.log("----------------------------");
+console.log("Part 1: Refactoring Old Code");
+console.log(csvArray);
+
+let row = csvArray.split("\n");
+let dataColl = []; //my array
+
+row.forEach((row) => {
+  let column = row.split(",");
+  // csvArray.push(column);});  //not an array erro
+  dataColl.push(column);
+});
+console.log("----------------------------");
+console.log("Part 2: Expanding Functionality");
+console.log(dataColl);
+
+//Part 3: Transforming Data
+let csvArray1 =
+  "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+let row1 = csvArray1.split("\n");
+let h=row1[0].split(",");
+let dataColl1 = [];
+for (let i = 1; i < row1.length; i++) {
+  let column1 = row1[i].split(","); // Split each row into columns
+  let rowObject = {}; // Create an empty object for each row
+  
+  // Assign values to the object based on headers
+  for (let j = 0; j < h.length; j++) {
+    rowObject[h[j].toLowerCase()] = column1[j];
+  }
+  
+  dataColl1.push(rowObject); // Push the object to the array
+}
+console.log("----------------------------");
+console.log("Part 3: Transforming Data");
+
+console.log(dataColl1);
+let firstrow = [];
+for (let i = 0; i < dataColl[0].length; i++) {
+  firstrow.push(dataColl[0][i].toLowerCase()); // Convert to lowercase
+}
+
+// Transform rows to objects
+let object = [];
+for (let i = 1; i < dataColl.length; i++) {
+  let rowR = {};
+  for (let j = 0; j < firstrow.length; j++) {
+    rowR[firstrow[j]] = dataColl[i][j]; // Assign values to keys
+  }
+  object.push(rowR);
+}
+console.log("----------------------------");
+console.log("Part 4: Sorting and Manipulating Data");
+console.log("Here is the data as objects:", object);
+let object1 = [
+  { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
+];
+
+// Step 1: Define the CSV header
+let finalcsv = "id,name,occupation,age\n";
 for (let i = 0; i < object1.length; i++) {
   
   // Create a row with id, name, occupation, and age, separated by commas
