@@ -251,3 +251,4 @@ dataColl1.forEach((person) => {
 let averageAge = totalAge / dataColl1.length;
 console.log("Average age of the group:", averageAge);
 
+//renaming 
